@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nadia Aulya</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <nav>
+    <ul>
+      <li><a href="#beranda">Beranda</a></li>
+      <li><a href="#tentang">Tentang Saya</a></li>
+      <li><a href="#portofolio">Portofolio</a></li>
+      <li><a href="#opini">Opini</a></li> <!-- ID sudah diperbaiki di sini -->
+      <li><a href="#kontak">Hubungi Saya</a></li>
+      <li class="dropdown">
+        <a href="#">Lainnya</a>
+        <div class="dropdown-content">
+          <a href="https://www.instagram.com/n.nadiaaulya/" target="_blank">Instagram</a>
+          <a href="https://www.tiktok.com/@herewith.na" target="_blank">Tiktok</a>
+          <a href="https://www.facebook.com/" target="_blank">Facebook</a>
+        </div>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+<section class="intro" id="beranda">
+  <img src="foto1.jpg" alt="Foto saya" width="250">
+  <div class="deskripsi">
+    <h1>Halo, Saya Nadia Aulya Oktaviana</h1>
+    <p>Saya adalah mahasiswa semester 2 Program Studi Teknik Informatika di Universitas Nahdlatul Ulama Sunan Giri.</p>
+  </div>
+</section>
+
+<hr>
+
+<section class="tentang-saya" id="tentang">
+  <h1 style="text-align: left;">Tentang Saya,</h1>
+  <div class="tentang-container">
+    <div style="flex: 1;" class="tentang-text">
+      <br>Saya lahir di Tuban pada 11 Juli 2005 dan saat ini berusia 19 tahun. Saya tinggal di Desa Selogabus, Kecamatan Parengan, Kabupaten Tuban. </br>
+      <br>Saya memiliki minat yang besar dalam bidang teknologi dan data, serta bercita-cita menjadi seorang Data Analyst profesional yang mampu memberikan insight strategis melalui proses pengolahan dan analisis data.</br>
+      <p><i></i></p>
+    </div>
+    <div class="foto2">
+      <img src="foto2.jpg" alt="Tentang Saya" width="250">
+    </div>
+  </div>
+</section>
+
+<hr>
+
+<section class="portofolio" id="portofolio">
+  <h2>Portofolio</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>No</th>
+        <th>Nama Kegiatan</th>
+        <th>Waktu Kegiatan</th>
+        <th>Bukti Kegiatan</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>MAPABA KE-VI HASYIM ASYARI</td>
+        <td>14-16 November 2024</td>
+        <td><img src="mapaba.jpg" alt="mapaba" ></td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>IT CAMP</td>
+        <td>21-22 Desember 2024</td>
+        <td><img src="it amp.jpg" alt="it camp" ></td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>BOOTCAMP STAF MAGANG</td>
+        <td>22-23 Februari 2025</td>
+        <td><img src="bootcamp.jpg" alt="bootcamp" ></td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<hr>
+
+<section class="opini" id="opini">
+  <h2>Opini :</h2>
+  <div class="grid-opini">
+    <div class="item-opini">
+      <img src="opsi1.png" alt="Opini 1">
+      <a href="https://nadiaaulyaaa.blogspot.com/?m=1"> <p> Blog pribadi </p></a>
+    </div>
+    <div class="item-opini">
+      <img src="opini2.jpg" alt="Opini 2">
+      <a href="https://docs.google.com/document/d/1I4Jp-uLifXJYA4Cob3gFFkvtAj0aMeqg/edit?usp=drivesdk&ouid=112181713961432928413&rtpof=true&sd=true"><p >Laporan Proyek CSS</p></a>
+    </div>
+    <div class="item-opini">
+      <img src="opini3.png" alt="Opini 3">
+      <a href="https://unugiri.ac.id/"><p>Universitas Nahdlatul Ulama Sunan Giri</p></a>
+    </div>
+    <div class="item-opini">
+      <img src="opini4.png" alt="Opini 4">
+      <a href="https://www.w3schools.com/"><p>Situs Pembelajaran Coding</p></a>
+    </div>
+    <div class="item-opini">
+      <img src="opini5.png" alt="Opini 5">
+      <a href="https://open.spotify.com/playlist/0KgtAyusO5t3HmUmECYJmh?si=f5b548527fac48d7"><p>Song of The Day</p></a>
+    </div>
+    <div class="item-opini">
+      <img src="opini6.png" alt="Opini 6">
+    <a href="https://id.wikipedia.org/wiki/Pemrograman"> <p>Pemrograman?</p></a>
+    </div>
+  </div>
+</section>
+
+<hr>
+
+<section class="kontak" id="kontak">
+  <h2>Hubungi Saya :</h2>
+  <div class="kontak-container">
+    <form class="form-kontak">
+      <input type="email" placeholder="Email">
+      <input type="text" placeholder="Nama">
+      <input type="text" placeholder="Subjek">
+      <textarea placeholder="Pesan"></textarea>
+      <button type="submit">Kirim</button>
+    </form>
+    <div class="map-kontak">
+        <p class="map">Maps:</p>
+        <p> </p>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3959.0058934093327!2d111.8610156!3d-7.125312499999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7783006bf0d6d7%3A0x9d013ae925d1b96e!2sAhmad%20ribkhan!5e0!3m2!1sid!2sid!4v1745761377447!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© By: Nadia Aulya Oktaviana</p>
+</footer>
+
+</body>
+</html>
