@@ -1,264 +1,472 @@
-/* Reset */
+/* reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
-  
-  /* Body */
-  body {
-    font-family: Arial, sans-serif;
-    background-color: #1e1e1e;
-    color: #e0e0e0;
-    padding-top: 60px; /* memberi ruang untuk fixed navbar */
-  }
-  
-  /* Header */
-  header {
-    background-color: #2c2c2c;
-    padding: 10px 0;
+    /* Font yang lebih modern dan mudah dibaca */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* body */
+body {
+    background-color: #F8F4E3; /* Krem muda */
+    color: #4A352F; /* Cokelat tua keabu-abuan */
+    padding-top: 60px; /* Ruang untuk fixed header */
+    line-height: 1.6; /* Keterbacaan paragraf */
+}
+
+/* header */
+header {
+    background-color: #6B4E3E; /* Cokelat sedang */
+    padding: 10px 0; /* Padding atas bawah */
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 1000;
-  }
-  
-  nav ul {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Bayangan untuk efek elevated */
+}
+
+nav ul {
     display: flex;
     justify-content: center;
     list-style: none;
-  }
-  
-  nav ul li {
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
     margin: 0 15px;
     position: relative;
-  }
-  
-  nav ul li a {
+}
+
+nav ul li a {
     text-decoration: none;
-    color: #ffffff;
-    font-weight: bold;
-    padding: 5px 10px;
-  }
-  
-  nav ul li a:hover {
-    background-color: #444;
-    border-radius: 5px;
-  }
-  
-  /* Dropdown */
-  .dropdown-content {
+    color: #FFFFFF; /* Putih */
+    font-weight: 600; /* Sedikit lebih tebal dari bold */
+    padding: 8px 15px; /* Padding lebih besar untuk area klik */
+    border-radius: 5px; /* Sudut sedikit membulat */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transisi halus */
+}
+
+nav ul li a:hover {
+    background-color: #8C6A5A; /* Cokelat sedikit lebih terang */
+    font-style: normal; /* Pastikan tidak italic saat hover */
+}
+
+/* Dropdown */
+.dropdown-content {
     display: none;
     position: absolute;
-    background-color: #444;
-    min-width: 150px;
-    top: 30px;
+    background-color: #5D4337; /* Cokelat gelap untuk dropdown */
+    min-width: 160px;
+    top: 100%; /* Turun tepat di bawah parent */
+    left: 0;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     z-index: 1;
-  }
-  
-  .dropdown-content a {
-    display: block;
-    padding: 10px;
-    color: #fff;
-  }
-  
-  .dropdown:hover .dropdown-content {
-    display: block;
-  }
-  
-  /* Intro */
-  .intro {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 50px 20px;
-    background-color: #2a2a2a;
-  }
-  
-  .intro img {
-    border-radius: 10px;
-    margin-right: 30px;
-  }
-  
-  .deskripsi h1 {
-    font-size: 28px;
-    margin-bottom: 10px;
-    color: #f0f0f0;
-  }
-  
-  .deskripsi p {
-    font-size: 18px;
-    color: #c0c0c0;
-  }
-  
-  /* Tentang Saya */
-  .tentang-saya {
-    background-color: #2f2f2f;
-    padding: 20px 20px;
-  }
-  
-  .tentang-saya h1 {
-    margin-bottom: 10px;
-    color: #f0f0f0;
-  }
-  
-  .tentang-saya p {
-    margin-bottom: 10px;
-    color: #ccc;
-  }
+    border-radius: 5px;
+    overflow: hidden; /* Memastikan sudut membulat diterapkan */
+}
 
-  .tentang-container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 10px;
-  }
-  
-  .tentang-text {
-    flex: 1;
-  }
-  
-  .foto2 {
-    flex-shrink: 0;
-  }
-  
-  /* Portofolio */
-  .portofolio {
-    background-color: #262626;
-    padding: 40px 20px;
-  }
-  
-  .portofolio h2 {
-    text-align: center;
+.dropdown-content a {
+    color: #FFFFFF;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left; /* Teks rata kiri */
+    transition: background-color 0.3s ease;
+    font-weight: normal; /* Non-bold untuk item dropdown */
+}
+
+.dropdown-content a:hover {
+    background-color: #8C6A5A;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Section Styling Umum */
+section {
+    padding: 60px 5%; /* Padding horizontal yang konsisten */
     margin-bottom: 20px;
-    color: #eaeaea;
-  }
-  
-  table {
-    width: 100%;
-    border-collapse: collapse;
-  }
-  
-  table th, table td {
-    border: 1px solid #444;
-    padding: 10px;
-    text-align: center;
-  }
-  
-  table th {
-    background-color: #3a3a3a;
-    color: #ffffff;
-  }
-  
-  table img {
-    width: 250px;
-    height: auto;
-    object-fit: cover;
-  }
-  
-  /* Opini */
-  .opini {
-    background-color: #2f2f2f;
-    padding: 40px 20px;
-  }
-  
-  .opini h2 {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #eaeaea;
-  }
-  
-  .grid-opini {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 kolom per baris */
-    gap: 20px;
-  }
-  
-  .item-opini {
-    background: #3a3a3a;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    text-align: center;
-  }
-  
-  .item-opini img {
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
-  }
-  
-  .item-opini p {
-    padding: 10px;
-    font-weight: bold;
-    color: #f0f0f0;
-  }
-  
-  /* Kontak */
-  .kontak {
-    padding: 40px 20px;
-    background: #1e1e1e;
-  }
-  
-  .kontak h2 {
+}
+
+section h1, section h2 {
     text-align: center;
     margin-bottom: 30px;
-    color: #eaeaea;
-  }
-  
-  .kontak-container {
+    color: #4A352F; /* Warna teks utama */
+    font-size: 2.5em; /* Ukuran font lebih besar untuk judul */
+    font-weight: 700;
+}
+
+/* Beranda */
+.Beranda {
+    background-color: #4A352F; /* Cokelat tua */
+    color: #F8F4E3; /* Krem muda */
+    text-align: center;
+    padding: 100px 5% 60px; /* Padding lebih banyak untuk bagian atas */
+    min-height: 550px; /* Tinggi minimum */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.Beranda img {
+    border-radius: 50%; /* Bulat sempurna */
+    border: 6px solid #8C6A5A; /* Cokelat sedang */
+    margin-bottom: 30px;
+    width: 250px; /* Ukuran gambar yang konsisten */
+    height: 250px;
+    object-fit: cover; /* Memastikan gambar tetap proporsional */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Bayangan untuk efek mendalam */
+}
+
+.Beranda h1 {
+    margin-top: 0; /* Hapus margin-top bawaan */
+    font-size: 3em;
+    color: #F8F4E3; /* Krem muda */
+}
+
+.Beranda p {
+    font-size: 1.2em;
+    max-width: 700px; /* Batasi lebar paragraf */
+    margin-top: 15px;
+}
+
+/* Tentang Saya */
+.Tentang {
+    background-color: #F8F4E3; /* Krem muda */
+    color: #4A352F;
+    text-align: left;
+    display: flex;
+    flex-direction: column; /* Menggunakan flexbox untuk layout */
+    align-items: center; /* Pusatkan secara horizontal */
+}
+
+.Tentang h1 {
+    text-align: center; /* Judul tetap di tengah */
+    margin-top: 0;
+    padding: 0;
+    color: #4A352F;
+}
+
+.tentang-konten {
+    display: flex;
+    flex-wrap: wrap; /* Izinkan wrap pada layar kecil */
+    align-items: center;
+    justify-content: center; /* Pusatkan item */
+    gap: 50px; /* Jarak antar elemen */
+    max-width: 1000px; /* Batasi lebar konten */
+    margin: 0 auto; /* Pusatkan konten */
+}
+
+.tentang-konten div {
+    flex: 1; /* Biarkan elemen mengambil ruang yang tersedia */
+    min-width: 300px; /* Ukuran minimum agar tidak terlalu kecil */
+}
+
+.Tentang p {
+    padding-left: 0; /* Hapus padding-left bawaan */
+    margin-bottom: 15px;
+    font-size: 1.1em;
+}
+
+.Tentang img {
+    border-radius: 50%; /* Bulat sempurna */
+    border: 5px solid #6B4E3E; /* Cokelat sedang */
+    width: 250px; /* Ukuran gambar yang konsisten */
+    height: 250px;
+    object-fit: cover;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Portofolio */
+.portofolio {
+    background-color: #4A352F; /* Cokelat tua */
+    color: #F8F4E3;
+    padding: 60px 5%;
+    text-align: center;
+}
+
+.portofolio h1 {
+    color: #F8F4E3;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 30px;
+    background-color: #6B4E3E; /* Latar belakang tabel */
+    border-radius: 10px; /* Sudut membulat */
+    overflow: hidden; /* Memastikan sudut membulat diterapkan */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+table th,
+table td {
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Garis border lebih lembut */
+    padding: 15px;
+    text-align: center;
+    color: #F8F4E3; /* Warna teks */
+}
+
+table th {
+    background-color: #5D4337; /* Cokelat gelap untuk header tabel */
+    font-weight: 600;
+    text-transform: uppercase; /* Huruf kapital */
+}
+
+table td img {
+    width: 150px; /* Ukuran gambar dalam tabel */
+    height: 100px;
+    object-fit: cover;
+    border-radius: 5px; /* Sudut membulat untuk gambar */
+    transition: transform 0.3s ease;
+}
+
+table td img:hover {
+    transform: scale(1.05); /* Sedikit zoom saat hover */
+}
+
+/* Opini */
+.opini {
+    background-color: #F8F4E3; /* Krem muda */
+    padding: 60px 5%;
+    color: #4A352F;
+}
+
+.opini h2 {
+    color: #4A352F;
+}
+
+.grid-opini {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsif */
+    gap: 30px; /* Jarak antar item */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.item-opini {
+    background: #6B4E3E; /* Cokelat sedang */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.item-opini:hover {
+    transform: translateY(-5px); /* Efek melayang */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.item-opini img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block; /* Menghilangkan spasi bawah gambar */
+}
+
+.item-opini p {
+    padding: 15px;
+    font-weight: 500;
+    color: #F8F4E3; /* Krem muda */
+}
+
+.item-opini a {
+    text-decoration: none;
+    display: block; /* Membuat seluruh area bisa diklik */
+    color: inherit; /* Mewarisi warna teks */
+}
+
+.item-opini a p:hover {
+    background-color: #5D4337; /* Cokelat gelap saat hover */
+    border-radius: 0 0 10px 10px; /* Hanya sudut bawah yang membulat */
+    font-style: normal; /* Pastikan tidak italic */
+}
+
+/* Kontak */
+.kontak {
+    padding: 60px 5%;
+    background: #4A352F; /* Cokelat tua */
+    color: #F8F4E3;
+    min-height: 500px;
+}
+
+.kontak h2 {
+    color: #F8F4E3;
+}
+
+.kontak-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
-  }
-  
-  .form-kontak {
+    justify-content: center;
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.form-kontak,
+.map-kontak {
     flex: 1;
     min-width: 300px;
-  }
-  
-  .form-kontak input,
-  .form-kontak textarea {
+    background-color: #6B4E3E; /* Latar belakang form/map */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.form-kontak input,
+.form-kontak textarea {
     width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    background-color: #333;
-    color: #fff;
-    border: 1px solid #555;
+    padding: 12px;
+    margin-bottom: 15px;
+    background-color: #F8F4E3; /* Krem muda untuk input */
+    color: #4A352F;
+    border: 1px solid #8C6A5A; /* Border cokelat sedang */
     border-radius: 5px;
-  }
-  
-  .form-kontak button {
-    background-color: #5c6bc0;
-    color: white;
-    padding: 10px;
+    font-size: 1em;
+}
+
+.form-kontak input::placeholder,
+.form-kontak textarea::placeholder {
+    color: #8C6A5A; /* Warna placeholder */
+}
+
+.form-kontak button {
+    background-color: #F1DABF; /* Warna krem yang lebih terang */
+    color: #4A352F;
+    padding: 12px 20px;
     width: 100%;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-  }
-  
-  .form-kontak button:hover {
-    background-color: #7986cb;
-  }
-  
-  .map-kontak {
-    flex: 1;
-    min-width: 300px;
-  }
-  
-  .map-kontak iframe {
+    font-size: 1.1em;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.form-kontak button:hover {
+    background-color: #E2C9A1; /* Sedikit lebih gelap saat hover */
+}
+
+.map-kontak h3 {
+    color: #F8F4E3;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.map-kontak iframe {
     width: 100%;
     height: 300px;
     border: 0;
-  }
-  
-  /* Footer */
-  footer {
+    border-radius: 8px; /* Sudut membulat untuk iframe */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+footer {
     text-align: center;
-    padding: 20px;
-    background-color: #3a3a3a;
-    color: #ffffff;
-    margin-top: 30px;
-  }
-  
+    padding: 25px 20px;
+    background-color: #4A352F; /* Cokelat tua */
+    color: #F8F4E3;
+    margin-top: 0; /* Hapus margin-top bawaan */
+    font-size: 0.9em;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+
+/* --- Responsive Design --- */
+@media (max-width: 768px) {
+    body {
+        padding-top: 50px;
+    }
+
+    header {
+        padding: 8px 0;
+    }
+
+    nav ul {
+        flex-direction: column; /* Tumpuk menu di bawah */
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    nav ul li a {
+        padding: 5px 10px;
+    }
+
+    .Beranda h1 {
+        font-size: 2.5em;
+    }
+
+    .Beranda p {
+        font-size: 1em;
+    }
+
+    section {
+        padding: 40px 5%;
+    }
+
+    section h1, section h2 {
+        font-size: 2em;
+        margin-bottom: 20px;
+    }
+
+    .tentang-konten {
+        flex-direction: column; /* Tumpuk konten tentang saya */
+        gap: 30px;
+        text-align: center;
+    }
+
+    .Tentang img {
+        margin-top: 20px;
+    }
+
+    table th, table td {
+        font-size: 0.9em;
+        padding: 10px;
+    }
+
+    table img {
+        width: 100px; /* Sesuaikan ukuran gambar tabel */
+        height: 70px;
+    }
+
+    .grid-opini {
+        grid-template-columns: 1fr; /* Satu kolom untuk opini */
+    }
+
+    .form-kontak, .map-kontak {
+        min-width: unset; /* Hapus min-width */
+        width: 100%; /* Ambil lebar penuh */
+    }
+
+    .map-kontak iframe {
+        height: 250px; /* Sesuaikan tinggi map */
+    }
+}
+
+@media (max-width: 480px) {
+    .Beranda img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .Beranda h1 {
+        font-size: 2em;
+    }
+
+    .Tentang img {
+        width: 180px;
+        height: 180px;
+    }
+}
